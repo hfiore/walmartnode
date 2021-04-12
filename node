@@ -1,0 +1,276 @@
+echo "# walmartnode" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/hfiore/walmartnode.git
+git push -u origin main
+const puppeteer = require('puppeteer');
+(async () => {
+  const browser = await puppeteer.launch()
+  const page = await browser.newPage()
+  
+  await page.goto('https://www.walmart.com/pharmacy/clinical-services/immunization/scheduled?imzType=covid&action=SignIn&rm=true')
+  
+  await page.setViewport({ width: 1440, height: 821 })
+  
+  await page.waitForSelector('.Grid-col:nth-child(3) > div > .button > .button-wrapper > .elc-icon')
+  await page.click('.Grid-col:nth-child(3) > div > .button > .button-wrapper > .elc-icon')
+  
+  await page.waitForSelector('.well > .filter-popup > .filter-popup-header > .button > .button-wrapper')
+  await page.click('.well > .filter-popup > .filter-popup-header > .button > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(1) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  await page.click('div:nth-child(1) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  
+  await page.waitForSelector('.index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button > .button-wrapper > span')
+  await page.click('.index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button > .button-wrapper > span')
+  
+  await page.waitForSelector('.questionList:nth-child(11) > .option > .validation-group > .option-content > span')
+  await page.click('.questionList:nth-child(11) > .option > .validation-group > .option-content > span')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button--primary')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button--primary')
+  
+  await page.waitForSelector('.index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button > .button-wrapper > span')
+  await page.click('.index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button > .button-wrapper > span')
+  
+  await page.waitForSelector('.index__scrollable__container___-Mhf3 > .index__slot__dates___1d3-l > .index__slot__date___2zL0W:nth-child(2) > .index__date_inside_div___1Y6KS > .index__semibold___u_rUS')
+  await page.click('.index__scrollable__container___-Mhf3 > .index__slot__dates___1d3-l > .index__slot__date___2zL0W:nth-child(2) > .index__date_inside_div___1Y6KS > .index__semibold___u_rUS')
+  
+  await page.waitForSelector('.index__scrollable__container___-Mhf3 > .index__slot__dates___1d3-l > .index__slot__date___2zL0W:nth-child(3) > .index__date_inside_div___1Y6KS > .index__semibold___u_rUS')
+  await page.click('.index__scrollable__container___-Mhf3 > .index__slot__dates___1d3-l > .index__slot__date___2zL0W:nth-child(3) > .index__date_inside_div___1Y6KS > .index__semibold___u_rUS')
+  
+  await page.waitForSelector('.index__scrollable__container___-Mhf3 > .index__slot__dates___1d3-l > .index__slot__date___2zL0W:nth-child(4) > .index__date_inside_div___1Y6KS > .index__semibold___u_rUS')
+  await page.click('.index__scrollable__container___-Mhf3 > .index__slot__dates___1d3-l > .index__slot__date___2zL0W:nth-child(4) > .index__date_inside_div___1Y6KS > .index__semibold___u_rUS')
+  
+  await page.waitForSelector('.index__scrollable__container___-Mhf3 > .index__slot__dates___1d3-l > .index__slot__date___2zL0W:nth-child(5) > .index__date_inside_div___1Y6KS > .index__semibold___u_rUS')
+  await page.click('.index__scrollable__container___-Mhf3 > .index__slot__dates___1d3-l > .index__slot__date___2zL0W:nth-child(5) > .index__date_inside_div___1Y6KS > .index__semibold___u_rUS')
+  
+  await page.waitForSelector('.index__scrollable__container___-Mhf3 > .index__slot__dates___1d3-l > .index__slot__date___2zL0W:nth-child(6) > .index__date_inside_div___1Y6KS > .index__semibold___u_rUS')
+  await page.click('.index__scrollable__container___-Mhf3 > .index__slot__dates___1d3-l > .index__slot__date___2zL0W:nth-child(6) > .index__date_inside_div___1Y6KS > .index__semibold___u_rUS')
+  
+  await page.waitForSelector('.index__scrollable__container___-Mhf3 > .index__slot__dates___1d3-l > .index__slot__date___2zL0W:nth-child(7) > .index__date_inside_div___1Y6KS > .index__semibold___u_rUS')
+  await page.click('.index__scrollable__container___-Mhf3 > .index__slot__dates___1d3-l > .index__slot__date___2zL0W:nth-child(7) > .index__date_inside_div___1Y6KS > .index__semibold___u_rUS')
+  
+  await page.waitForSelector('.index__address__block__wrapper___20PRU > .index__address__block__container___1ISwy > .button > .button-wrapper > span')
+  await page.click('.index__address__block__wrapper___20PRU > .index__address__block__container___1ISwy > .button > .button-wrapper > span')
+  
+  await page.waitForSelector('div:nth-child(2) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  await page.click('div:nth-child(2) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(3) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .store-type')
+  await page.click('div:nth-child(3) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .store-type')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(4) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  await page.click('div:nth-child(4) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(5) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  await page.click('div:nth-child(5) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal > .modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3')
+  await page.click('.modal > .modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3')
+  
+  await page.waitForSelector('div:nth-child(6) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  await page.click('div:nth-child(6) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(7) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  await page.click('div:nth-child(7) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(8) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .store-type')
+  await page.click('div:nth-child(8) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .store-type')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(9) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  await page.click('div:nth-child(9) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(10) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  await page.click('div:nth-child(10) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(11) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  await page.click('div:nth-child(11) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(12) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .store-type')
+  await page.click('div:nth-child(12) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .store-type')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(13) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  await page.click('div:nth-child(13) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal > .modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3')
+  await page.click('.modal > .modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3')
+  
+  await page.waitForSelector('div:nth-child(14) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  await page.click('div:nth-child(14) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(15) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  await page.click('div:nth-child(15) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-normal:nth-child(2)')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal > .modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3')
+  await page.click('.modal > .modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3')
+  
+  await page.waitForSelector('div:nth-child(16) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .store-type')
+  await page.click('div:nth-child(16) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .store-type')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('.well > .store-list-container > div:nth-child(17) > .radio-tile > .radio-tile-content')
+  await page.click('.well > .store-list-container > div:nth-child(17) > .radio-tile > .radio-tile-content')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(18) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .store-type')
+  await page.click('div:nth-child(18) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .store-type')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal > .modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3')
+  await page.click('.modal > .modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3')
+  
+  await page.waitForSelector('div:nth-child(19) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  await page.click('div:nth-child(19) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal > .modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3')
+  await page.click('.modal > .modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3')
+  
+  await page.waitForSelector('div:nth-child(20) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  await page.click('div:nth-child(20) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('.well > .store-list-container > div:nth-child(21) > .radio-tile > .radio-tile-content')
+  await page.click('.well > .store-list-container > div:nth-child(21) > .radio-tile > .radio-tile-content')
+  
+  await page.waitForSelector('.index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button > .button-wrapper > span')
+  await page.click('.index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button > .button-wrapper > span')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(22) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  await page.click('div:nth-child(22) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(23) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .store-type')
+  await page.click('div:nth-child(23) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .store-type')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(24) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  await page.click('div:nth-child(24) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-address > .font-semibold')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await page.waitForSelector('div:nth-child(25) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-distance > .store-distance-text')
+  await page.click('div:nth-child(25) > .radio-tile > .radio-tile-content > .radio-tile-header > .radio-tile-primary > .text-left > .pickup-option > .store-distance > .store-distance-text')
+  
+  await page.waitForSelector('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  await page.click('.style__container___2_i5o > .style__containerInner___2W_jk > .index__imz-container___1dCxY > .index__submitBtnSectionCta___3Tu2L > .button')
+  
+  await page.waitForSelector('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  await page.click('.modal-content > #vaccine-unavailable-alert-modal > .pull-right > .index__primaryAction___14JN3 > .button-wrapper')
+  
+  await browser.close()
+})()
